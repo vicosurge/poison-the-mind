@@ -1,0 +1,16 @@
+================================================================================
+Middle, Begining, End
+================================================================================
+Author: Peter Newman
+Word Count: 22
+Source: 20050128072655_fiction-display.php_q85a28525.html
+================================================================================
+
+
+Warning:  file(./Content/fiction/Pete1093497972.txt): failed to open stream: Permission denied in /home/httpd/vhosts/poisonthemind.com/httpdocs/style/1/fiction-display.php on line 139
+
+Warning:  implode(): Bad arguments. in /home/httpd/vhosts/poisonthemind.com/httpdocs/style/1/fiction-display.php on line 140
+
+================================================================================
+Archived from Poison the Mind (poisonthemind.com)
+================================================================================

@@ -1,0 +1,66 @@
+================================================================================
+Reality.txt
+================================================================================
+Author: Draconias Galactica
+Date: Unknown
+Word Count: 1048
+Source: 20050119224229_fiction-display.php_q94fd00e1.html
+================================================================================
+
+Reality
+
+By Draconias Galactica
+
+2002 Draconias Galactica
+
+Everything has a purpose, maybe. Nothing happened just for the heck of it - there are too many possibilities in reality for it just hope for things to turn out right. If everything is happening, like some people belive, eventually reality has to reach a stack overflow error or something. That's the cheap computer science view of infinite possibilities, concerned mostly with how much reality heap space there is. Lord knows what would happen if we had to reboot reality due to an overflow.
+
+So reality must know what it's doing, maybe. So when something happens, it happens for a reason. Life is something. Every life has a reason. It might be a stupid reason like feeding a goldfish that's going to die anyways, but there's always some sort of reason. We don't have time or memory to waste on a person, an encapsulation, an object that exists without serving some other purpose in the program. And just think how much more trouble they'd add to debugging flawed code. I'd like to meet the guy who debugs all this reality. He's probably the most overworked individual ever.
+
+But my point is, maybe, everything happens, happened, will happen, for a reason. There was a reason I was born. There was a reason my dry cleaning was three days late a week before the bomb nuked it to hell anyways. There is a reason why I have sunburn all over my neck. Unless this is a logic error. Or a bug. Or a typo. Miss a semicolon, Hitler becomes a dancer and the popluation of Europe swells by a few hundred million. It's like stomping on butterflies. Maybe butterflies were made to be stomped on.
+
+I think I know the code for my standard day. This day occurs unless a randomly generated number somewhere in the reality code says otherwise.
+
+while (Sun == UnbelivablyHot)
+
+{  //begin while
+
+Human.WalkAround(15);		//make human wander around aimlessly
+
+Human.KillCritter(Rat);	//make human eat
+
+Human.WalkAround(10);		//make human wander around aimlessly more
+
+Human.Sleep(10);		//make human go to sleep
+
+}  //end while
+
+Not much to say about it. I should probably randomly generate which type of rat I eat, and test whether or not RatIsAround == true. But you get the idea. So what possible purpose could there be to any of this? It's beyond me, and I don't really care too much.
+
+I probably would have generated code like that for about 40 to 50 years if it weren't for the bomb. But the bomb came, just a few days before I was supposed to start working on chopping down those years. So what was the purpose of learning all that code? Maybe there wasn't a purpose in _my_ life, maybe it was in somebody else's. Maybe that was just in case WorldGetsNukedOver == false. Maybe there's another version of me in a nuke-free world somewhere.
+
+If there could be other versions of me, there could be other versions of my dad. Of my sister. In WorldGetsNukedOver == true, they're dead. My dad got it on the crapper, from what my sister told me. What was the purpose of him going to the crapper when the world was about to be nuked? Maybe it was so my sister would have to go down to the basement and get the plunger. Maybe it would be so he could meet some sort of ClogTheTolit() quota so he could die with Dad.CrapperKarma = neutral;. How should I know?
+
+My sister is dead too. She didn't die on the crapper. Some worthless crap killed her. Reality's source code is flawed. Why the hell she was supposed to die, I don't know. I guess the debugger isn't all he's cracked up to be. I wasn't around when my sister died. I was out LookingForWater(NoClueWhereWaterIs = true). All I know is what the people we were bunking with told us. Some ass waltzed into town with a gun. NobodyInTownHasGun = true. Basically, that made him our boss. When he said he was going to fuck my sister, nobody could do much. Most of us hadn't eaten lately anyways, so none of us were in a position to resist. She tried to stop him, but it didn't make much difference. Actually, it did make a difference. Everything has a purpose. Maybe. The difference it made was that when he was done, the asshole stuck hisgun up between her legs and shot her to death.
+
+Human.PissedBeyondBelief = true; Human.WantsVengance = true; Human.HomicidalRage = true; Human...you get the point.
+
+I went out, and a I found a gun. It took a while, but I found one. Human.LuckyBastard = true; I went to the local camps and asked around about the asshole. Asshole.Height = 74. Asshole.DementedSmile == true; Asshole.ScarsOnFace = 3; It didn't take too long. Just a month or two. He was sleeping when I tied his arms together. He woke up just as I was finishing tying his legs together. You killed my sister asshole. He didn't know what I was talking about. He kept shouting about not beeing a queer like this. That's the least of your problems.
+
+Asshole.ShotgunStuffedDownMouth = true;. Human.PullTrigger();. Asshole.LifeStatus = dead;.
+
+Every action, method, every person, object, every thing has a purpose. Maybe. I figured out my purpose after shoot-shoot-reload-ing seven times. Children's statistics are derived from their parent's.
+
+if ((Dad.IsIdiot == true) && (Mom.IsIdiot == true))
+
+Son.IsIdiot == true;
+
+Idiots do stupid things. Idiots piss me off. Idiots do stuff like killing my sister. Idiots can't be allowed to live. I don't have anything better to do. I might as well be the one to make sure Idiots.AllIdiots = dead;. They fucked with me before the bomb. They fucked with me too much after the bomb. I was getting sick of writing dumbed-down interfaces for them anyways.
+
+The bomb had a purpose, too, I think. Lord knows how many people it killed. I just know it missed a few too many idiots. The bomb was supposed to clense the Earth of idiots. It got the ball rolling. That was its purpose. My purpose is to keep that ball moving forward. Human.Purpose == Bomb.Purpose;. I have a gun. I have some legs. I have a purpose.
+
+I have a lot of work to do.
+
+================================================================================
+Archived from Poison the Mind (poisonthemind.com)
+================================================================================
