@@ -1,0 +1,458 @@
+/* Poison the Mind Memorial Site Stylesheet */
+
+:root {
+    --primary-color: #F16565;
+    --primary-dark: #993300;
+    --primary-hover: #FF9900;
+    --accent: #FF3366;
+    --bg-dark: #1a1a1a;
+    --bg-light: #f5f5f5;
+    --text-dark: #2c2c2c;
+    --text-light: #666;
+    --border-color: #ddd;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: #fff;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, var(--bg-dark) 0%, #2c2c2c 100%);
+    color: white;
+    padding: 2rem 0;
+    border-bottom: 4px solid var(--primary-color);
+}
+
+.site-title {
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.site-title h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.site-title h1 a {
+    color: white;
+    text-decoration: none;
+}
+
+.site-title h1 a:hover {
+    color: var(--primary-hover);
+}
+
+.site-subtitle {
+    font-size: 1.2rem;
+    color: #ccc;
+    font-style: italic;
+}
+
+.memorial-notice {
+    text-align: center;
+    background: rgba(241, 101, 101, 0.1);
+    padding: 0.8rem;
+    margin-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.memorial-notice p {
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+/* Navigation */
+nav {
+    background-color: var(--bg-dark);
+    padding: 1rem 0;
+    border-bottom: 2px solid var(--primary-dark);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: color 0.3s;
+    padding: 0.5rem 1rem;
+    display: block;
+}
+
+nav a:hover {
+    color: var(--primary-hover);
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.narrow-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Hero Section */
+.hero {
+    background: var(--bg-light);
+    padding: 3rem 2rem;
+    margin-bottom: 2rem;
+    border-left: 4px solid var(--primary-color);
+}
+
+.hero h2 {
+    font-size: 2rem;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    line-height: 1.8;
+}
+
+/* Stats */
+.stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.stat-card {
+    background: white;
+    border: 2px solid var(--border-color);
+    padding: 1.5rem;
+    text-align: center;
+    border-radius: 4px;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--primary-color);
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Section Headers */
+.section-header {
+    margin: 3rem 0 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid var(--primary-color);
+}
+
+.section-header h2 {
+    font-size: 1.8rem;
+    color: var(--text-dark);
+}
+
+/* Author Grid */
+.author-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.author-card {
+    background: white;
+    border: 2px solid var(--border-color);
+    padding: 1.5rem;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+.author-card:hover {
+    border-color: var(--primary-color);
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.author-card h3 {
+    font-size: 1.4rem;
+    color: var(--primary-dark);
+    margin-bottom: 0.8rem;
+}
+
+.author-card h3 a {
+    color: var(--primary-dark);
+    text-decoration: none;
+}
+
+.author-card h3 a:hover {
+    color: var(--primary-hover);
+}
+
+.author-stats {
+    color: var(--text-light);
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.author-card .btn {
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+/* Story List */
+.story-list {
+    margin: 2rem 0;
+}
+
+.story-item {
+    background: white;
+    border: 1px solid var(--border-color);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-left: 4px solid var(--primary-color);
+    transition: all 0.3s;
+}
+
+.story-item:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transform: translateX(4px);
+}
+
+.story-item h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.story-item h3 a {
+    color: var(--text-dark);
+    text-decoration: none;
+}
+
+.story-item h3 a:hover {
+    color: var(--primary-color);
+}
+
+.story-meta {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin-bottom: 0.8rem;
+}
+
+.story-excerpt {
+    color: var(--text-dark);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+/* Story Content */
+.story-content {
+    background: white;
+    padding: 2rem;
+    line-height: 1.8;
+    font-size: 1rem;
+}
+
+.story-header {
+    border-bottom: 3px solid var(--primary-color);
+    padding-bottom: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.story-header h1 {
+    font-size: 2.2rem;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
+
+.story-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    color: var(--text-light);
+    font-size: 0.95rem;
+}
+
+.story-info strong {
+    color: var(--text-dark);
+}
+
+.story-text {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.story-text p {
+    margin-bottom: 1.2rem;
+    text-align: justify;
+    text-indent: 2em;
+}
+
+.story-text p:first-child {
+    text-indent: 0;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: var(--primary-hover);
+}
+
+.btn-secondary {
+    background-color: var(--text-light);
+}
+
+.btn-secondary:hover {
+    background-color: var(--text-dark);
+}
+
+/* Timeline */
+.timeline {
+    margin: 2rem 0;
+}
+
+.timeline-item {
+    border-left: 3px solid var(--primary-color);
+    padding-left: 1.5rem;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -7px;
+    top: 0;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+}
+
+.timeline-date {
+    font-weight: bold;
+    color: var(--primary-dark);
+    margin-bottom: 0.3rem;
+}
+
+.timeline-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--text-dark);
+    margin-bottom: 0.3rem;
+}
+
+.timeline-content {
+    color: var(--text-light);
+}
+
+/* Footer */
+footer {
+    background-color: var(--bg-dark);
+    color: white;
+    padding: 2rem;
+    margin-top: 4rem;
+    text-align: center;
+}
+
+footer p {
+    margin-bottom: 0.5rem;
+}
+
+footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--primary-hover);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .site-title h1 {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        gap: 1rem;
+    }
+
+    .container, .narrow-container {
+        padding: 1rem;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .author-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Archive notice */
+.archive-notice {
+    background: #fffbea;
+    border: 2px solid #f0ad4e;
+    border-radius: 4px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+}
+
+.archive-notice h3 {
+    color: #856404;
+    margin-bottom: 0.5rem;
+}
+
+.archive-notice p {
+    color: #856404;
+}
