@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Conversations - Poison the Mind Memorial</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .topic {
+            background: #1a1a1a;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .topic h4 {
+            color: #F16565;
+            margin: 0 0 0.5rem 0;
+        }
+        .topic-meta {
+            color: #888;
+            font-size: 0.85rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #333;
+        }
+        .post {
+            background: #222;
+            border-radius: 6px;
+            padding: 1rem;
+            margin-bottom: 0.75rem;
+        }
+        .post-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        .username {
+            color: #F16565;
+        }
+        .date {
+            color: #666;
+            font-size: 0.85rem;
+        }
+        .post-content {
+            color: #ccc;
+            line-height: 1.5;
+            white-space: pre-wrap;
+        }
+        .item-comments {
+            background: #1a1a1a;
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+        .item-comments h5 {
+            color: #F16565;
+            margin: 0 0 0.75rem 0;
+        }
+        .comment {
+            background: #222;
+            padding: 0.75rem;
+            border-radius: 4px;
+            margin-bottom: 0.5rem;
+            color: #ccc;
+        }
+        .comment strong {
+            color: #F16565;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        .stat-box {
+            background: #1a1a1a;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .stat-box .number {
+            font-size: 1.5rem;
+            color: #F16565;
+            font-weight: bold;
+        }
+        .stat-box .label {
+            color: #888;
+            font-size: 0.85rem;
+        }
+        .user-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        .user-tag {
+            background: #333;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            color: #ccc;
+        }
+        .section-tabs {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        .tab-btn {
+            background: #333;
+            color: #ddd;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        .tab-btn.active {
+            background: #F16565;
+            color: #fff;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="site-title">
+        <h1><a href="/">[ poison the mind ]</a></h1>
+        <p class="site-subtitle">Lethal Dosage of Creativity</p>
+    </div>
+    <div class="memorial-notice">
+        <p>A Memorial Archive - Preserving the creative works of a beloved community (2004-2010)</p>
+    </div>
+</header>
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="authors/index.html">Authors</a></li>
+        <li><a href="gallery.html">Art Gallery</a></li>
+        <li><a href="conversations.html" class="active">Conversations</a></li>
+        <li><a href="archive/timeline.html">Timeline</a></li>
+        <li><a href="archive/community.html">Community</a></li>
+    </ul>
+</nav>
+
+<div class="container">
+    <h2>Community Conversations</h2>
+    <p>Forum discussions and gallery comments recovered from the Poison the Mind archives. These conversations capture the spirit and camaraderie of the community.</p>
+
+    <div class="stats-grid">
+        <div class="stat-box">
+            <div class="number">752</div>
+            <div class="label">Forum Posts</div>
+        </div>
+        <div class="stat-box">
+            <div class="number">1</div>
+            <div class="label">Discussion Topics</div>
+        </div>
+        <div class="stat-box">
+            <div class="number">100</div>
+            <div class="label">Gallery Comments</div>
+        </div>
+        <div class="stat-box">
+            <div class="number">39</div>
+            <div class="label">Community Members</div>
+        </div>
+    </div>
+
+    <div class="section-tabs">
+        <button class="tab-btn active" data-tab="forum">Forum Discussions</button>
+        <button class="tab-btn" data-tab="comments">Gallery Comments</button>
+        <button class="tab-btn" data-tab="members">Members</button>
+    </div>
+
+    <div id="forum" class="tab-content active">
+        <h3>Forum Discussions</h3>
+        
+            <div class="topic">
+                <h4>Unknown Topic</h4>
+                <p class="topic-meta">Forum: General | 752 posts archived</p>
+                
+                <div class="post">
+                    <div class="post-header">
+                        <strong class="username">Skydog Hex</strong> from Deep in the Bunker
+                        <span class="date">Fri, Apr 25 08, 8:47 AM</span>
+                    </div>
+                    <div class="post-content">Ooh new stories by Edipo! I've read the Weapon Master. I will read the second one tomorrow, its' getting really late now. I'm trying to write this with out any spoilers for the others who might come along and download your story.
+
+Aside from some of the grammar issues, which if I recall English is your second language*, the only critical thing I have to say is at the end the jump from when the corporal is yelling at Scivio to the next paragraph is jarring. After reading it twice, I got what you ...</div>
+                </div>
+                <div class="post">
+                    <div class="post-header">
+                        <strong class="username">Anthem</strong> from Maryland, USA
+                        <span class="date">Fri, Aug 22 03, 3:14 PM</span>
+                    </div>
+                    <div class="post-content">I heard about the contest, so figured I'd give it a shot for the hell of it. I already have something to submit.</div>
+                </div>
+                <div class="post">
+                    <div class="post-header">
+                        <strong class="username">Rad-X</strong> from Glasgow, Scotland
+                        <span class="date">Fri, Aug 22 03, 7:12 AM</span>
+                    </div>
+                    <div class="post-content">I will do my best, but it will take a while to make.</div>
+                </div>
+                <div class="post">
+                    <div class="post-header">
+                        <strong class="username">Rebo</strong> from Vault 99
+                        <span class="date">Fri, Aug 22 03, 8:21 PM</span>
+                    </div>
+                    <div class="post-content">Hey all, 
+
+   First post because I just heard about the contest. Missed this much, tho...is there a length limit/requirement? Dont wanna write too much or not enough, so just wondering. Thanks a ton.</div>
+                </div>
+                <div class="post">
+                    <div class="post-header">
+                        <strong class="username">Captain Carnage</strong> from Someplace between Hell and Canada
+                        <span class="date">Fri, Dec 15 06, 2:46 AM</span>
+                    </div>
+                    <div class="post-content">Believe it or not, I achieved plot inspiration...Gil & Zen now has SEVEN new episodes.
+
+Get em here!
+
+http://poisonthemind.com/comiclist.php?A=ZEN</div>
+                </div>
+                <div class="post">
+                    <div class="post-header">
+                        <strong class="username">voltaire</strong> from Cookin with the devil, fryin down in hell
+                        <span class="date">Fri, Dec 15 06, 4:17 AM</span>
+                    </div>
+                    <div class="post-content">Damn what a rush of hilarity..
+
+besides what I already commented on in the last strip, Ive noticed that your level of art has gone up dramaticaly in these, I dont think many will notice but jeesh that ceiling lamp in that last strip is crazy detailed,... 
+
+i know its weird but I like those little touches keep em comming at us</div>
+                </div>
+                <div class="post">
+                    <div class="post-header">
+                        <strong class="username">Captain Carnage</strong> from Someplace between Hell and Canada
+                        <span class="date">Fri, Dec 15 06, 4:18 AM</span>
+                    </div>
+                    <div class="post-content">i actually drew it like three times bigger, and then shrank it to size...and fixed it up a bit.</div>
+                </div>
+                <div class="post">
+                    <div class="post-header">
+                        <strong class="username">Skydog Hex</strong> from I wish I knew
+                        <span class="date">Fri, Dec 21 07, 6:54 PM</span>
+                    </div>
+                    <div class="post-content">Edipo wrote:*whistles* Out of a job *whistles*</div>
+                </div>
+                <div class="post">
+                    <div class="post-header">
+                        <strong class="username">Skeller</strong> from In da shop...
+                        <span class="date">Fri, Dec 21 07, 8:56 PM</span>
+                    </div>
+                    <div class="post-content">Edipo wrote:*whistles* Out of a job *whistles*</div>
+                </div>
+                <div class="post">
+                    <div class="post-header">
+                        <strong class="username">Guest</strong>
+                        <span class="date">Fri, Feb 07 03, 3:06 AM</span>
+                    </div>
+                    <div class="post-content">[quote=".:ÃƒÂ</div>
+                </div>
+            </div>
+    </div>
+
+    <div id="comments" class="tab-content">
+        <h3>Gallery Comments</h3>
+        
+            <div class="item-comments">
+                <h5>Chapter XXXVII BC.doc by Edipo</h5>
+                
+                <div class="comment">
+                    <strong>voltaire</strong>: ha nice, im glad i had something to do with this madness,
+
+I really like your style vico, it feels more like i just drank your story then read it, and fuck me if I think im gonna be hungover in the mourn..
+                </div>
+                <div class="comment">
+                    <strong>Emerson</strong>: Bitchin'... That's what I'm going to do when I get hold of you Mr Surge!!! Mark my words. My fucking words, even.
+
+Cool little story though, I think the idea of having drunk the story is rather excellent, I'll have to use that more often I believe.
+                </div>
+                <div class="comment">
+                    <strong>Edipo</strong>: Short, simple and aggressive, that's how I write my Border Crossing stories.
+                </div>
+                <div class="comment">
+                    <strong>voltaire</strong>: ha nice, im glad i had something to do with this madness,
+
+I really like your style vico, it feels more like i just drank your story then read it, and fuck me if I think im gonna be hungover in the mourn..
+                </div>
+                <div class="comment">
+                    <strong>Emerson</strong>: Bitchin'... That's what I'm going to do when I get hold of you Mr Surge!!! Mark my words. My fucking words, even.
+
+Cool little story though, I think the idea of having drunk the story is rather excellent, I'll have to use that more often I believe.
+                </div>
+            </div>
+            <div class="item-comments">
+                <h5>Autumn Tree.jpg by Sanctusorium</h5>
+                
+                <div class="comment">
+                    <strong>Skeller</strong>: Is this color manipulated? Seems a bit fuzzy to, but I know how the PTM image joint fuzzes stuff up alot.
+                </div>
+                <div class="comment">
+                    <strong>Edipo</strong>: If it\'s not manipulated then the color is amazing... I\'m astonished by the tree.
+                </div>
+                <div class="comment">
+                    <strong>Sanctusorium</strong>: Its HDR photography.  Basically, its five different exposures of the same tree combined.  Two underexposed, two over, and one just right.  Mixed them together with photomatix and you got a shot that has the best highlights and the best shadows all in one =)  The reason it is so fuzzy is because of the the fact I had to take five different shots...  And it was a windy day...  So lots of movement.  I tried to reduce it as much as I can though =b
+                </div>
+                <div class="comment">
+                    <strong>Skeller</strong>: Is this color manipulated? Seems a bit fuzzy to, but I know how the PTM image joint fuzzes stuff up alot.
+                </div>
+                <div class="comment">
+                    <strong>Edipo</strong>: If it\'s not manipulated then the color is amazing... I\'m astonished by the tree.
+                </div>
+            </div>
+            <div class="item-comments">
+                <h5>Classical Metal WIP by AmmoJack</h5>
+                
+                <div class="comment">
+                    <strong>voltaire</strong>: I see the armies of the world desperately fighting a giant beast in New York.. he flings whole armies like paper,... his breath melts buildings and his sweat rains down like small grenades... with our armies slowly dwindling and nukes having no effect one man looks over the ruins at the beast....
+
+dammit man finish the song so i can finish my vision..
+                </div>
+                <div class="comment">
+                    <strong>autumnaton</strong>: Volt basically hit the nail on the head.
+                </div>
+                <div class="comment">
+                    <strong>voltaire</strong>: I see the armies of the world desperately fighting a giant beast in New York.. he flings whole armies like paper,... his breath melts buildings and his sweat rains down like small grenades... with our armies slowly dwindling and nukes having no effect one man looks over the ruins at the beast....
+
+dammit man finish the song so i can finish my vision..
+                </div>
+                <div class="comment">
+                    <strong>autumnaton</strong>: Volt basically hit the nail on the head.
+                </div>
+                <div class="comment">
+                    <strong>voltaire</strong>: I see the armies of the world desperately fighting a giant beast in New York.. he flings whole armies like paper,... his breath melts buildings and his sweat rains down like small grenades... with our armies slowly dwindling and nukes having no effect one man looks over the ruins at the beast....
+
+dammit man finish the song so i can finish my vision..
+                </div>
+            </div>
+            <div class="item-comments">
+                <h5>sign.jpg by Sanctusorium</h5>
+                
+                <div class="comment">
+                    <strong>Skeller</strong>: I bet they\'ve got some five legged frogs out there some where.
+                </div>
+                <div class="comment">
+                    <strong>Sanctusorium</strong>: Its southern Missouri.  WOULD NOT DOUBT IT.
+                </div>
+                <div class="comment">
+                    <strong>Skeller</strong>: I bet they\'ve got some five legged frogs out there some where.
+                </div>
+                <div class="comment">
+                    <strong>Sanctusorium</strong>: Its southern Missouri.  WOULD NOT DOUBT IT.
+                </div>
+                <div class="comment">
+                    <strong>Skeller</strong>: I bet they\'ve got some five legged frogs out there some where.
+                </div>
+            </div>
+            <div class="item-comments">
+                <h5>Chicken Burger.jpg by Captain Carnage</h5>
+                
+                <div class="comment">
+                    <strong>Mr-Terrence</strong>: I would eat there, even if I pictured the chickens face as I ate.
+                </div>
+                <div class="comment">
+                    <strong>Skeller</strong>: That should be on a t-shirt and I should be wearing it. My only crit for this is it could have used a little dribble of secret sauce.
+                </div>
+                <div class="comment">
+                    <strong>voltaire</strong>: thats one happy chicken, I would eat him with divin satisfaction
+                </div>
+                <div class="comment">
+                    <strong>Mr-Terrence</strong>: I would eat there, even if I pictured the chickens face as I ate.
+                </div>
+                <div class="comment">
+                    <strong>Skeller</strong>: That should be on a t-shirt and I should be wearing it. My only crit for this is it could have used a little dribble of secret sauce.
+                </div>
+            </div>
+            <div class="item-comments">
+                <h5>Kingoftheworld by Skeller</h5>
+                
+                <div class="comment">
+                    <strong>metaldrummer9591</strong>: Nice! I really like this piece, the facial detail is awesome, really makes it look more dark and evil. Good job man.
+                </div>
+                <div class="comment">
+                    <strong>Skydog Hex</strong>: Thanks for the nightmare Skeller. Dude is one fugley bastich. Nice sketch though.
+                </div>
+                <div class="comment">
+                    <strong>metaldrummer9591</strong>: Nice! I really like this piece, the facial detail is awesome, really makes it look more dark and evil. Good job man.
+                </div>
+                <div class="comment">
+                    <strong>Skydog Hex</strong>: Thanks for the nightmare Skeller. Dude is one fugley bastich. Nice sketch though.
+                </div>
+                <div class="comment">
+                    <strong>voltaire</strong>: this reminds me of one of your creepy ass holloween costumes.. I think they have similar eroding skin or something
+                </div>
+            </div>
+            <div class="item-comments">
+                <h5>MVI_0072.avi by Captain Carnage</h5>
+                
+                <div class="comment">
+                    <strong>voltaire</strong>: Im not a big fan of Giganto blades, but the one second from the top I could see putting in my own collection.
+does it got a name?
+                </div>
+                <div class="comment">
+                    <strong>voltaire</strong>: Im not a big fan of Giganto blades, but the one second from the top I could see putting in my own collection.
+does it got a name?
+                </div>
+                <div class="comment">
+                    <strong>voltaire</strong>: Im not a big fan of Giganto blades, but the one second from the top I could see putting in my own collection.
+does it got a name?
+                </div>
+            </div>
+            <div class="item-comments">
+                <h5>MVI_0073.avi by Captain Carnage</h5>
+                
+                <div class="comment">
+                    <strong>voltaire</strong>: It looks pretty damn good for a homemade sword...
+would like to see it when its all finished and kill worthy.
+Had a freind who had used to have a little homemade forge in his backyard but the best he ever made was a HariKari suicide knife., so you can see how well that went...
+                </div>
+                <div class="comment">
+                    <strong>voltaire</strong>: It looks pretty damn good for a homemade sword...
+would like to see it when its all finished and kill worthy.
+Had a freind who had used to have a little homemade forge in his backyard but the best he ever made was a HariKari suicide knife., so you can see how well that went...
+                </div>
+                <div class="comment">
+                    <strong>voltaire</strong>: It looks pretty damn good for a homemade sword...
+would like to see it when its all finished and kill worthy.
+Had a freind who had used to have a little homemade forge in his backyard but the best he ever made was a HariKari suicide knife., so you can see how well that went...
+                </div>
+            </div>
+            <div class="item-comments">
+                <h5>MVI_0071.avi by Captain Carnage</h5>
+                
+                <div class="comment">
+                    <strong>voltaire</strong>: is that the techno themed sword I always see at mall stores?
+if it is it looks alot better on video than it did in real life..
+
+like the Tiedye shirt Bro'sive
+                </div>
+                <div class="comment">
+                    <strong>voltaire</strong>: is that the techno themed sword I always see at mall stores?
+if it is it looks alot better on video than it did in real life..
+
+like the Tiedye shirt Bro'sive
+                </div>
+                <div class="comment">
+                    <strong>voltaire</strong>: is that the techno themed sword I always see at mall stores?
+if it is it looks alot better on video than it did in real life..
+
+like the Tiedye shirt Bro'sive
+                </div>
+            </div>
+            <div class="item-comments">
+                <h5>Carlos the Schizophrenic Gardener.doc by footfoot</h5>
+                
+                <div class="comment">
+                    <strong>Admiral_Dread</strong>: I really enjoyed reading this, it was something different. It will be really interesting to see how the illustrations turn out.
+                </div>
+                <div class="comment">
+                    <strong>Admiral_Dread</strong>: I really enjoyed reading this, it was something different. It will be really interesting to see how the illustrations turn out.
+                </div>
+                <div class="comment">
+                    <strong>Admiral_Dread</strong>: I really enjoyed reading this, it was something different. It will be really interesting to see how the illustrations turn out.
+                </div>
+            </div>
+            <div class="item-comments">
+                <h5>Viva Rialto.doc by footfoot</h5>
+                
+                <div class="comment">
+                    <strong>Skeller</strong>: This is tremendous writing.
+                </div>
+                <div class="comment">
+                    <strong>Skeller</strong>: This is tremendous writing.
+                </div>
+                <div class="comment">
+                    <strong>Skeller</strong>: This is tremendous writing.
+                </div>
+            </div>
+            <div class="item-comments">
+                <h5>Random.mp3 by Edipo</h5>
+                
+                <div class="comment">
+                    <strong>Skeller</strong>: Rock on Metal Man! You need to get a garage!
+                </div>
+                <div class="comment">
+                    <strong>Captain Carnage</strong>: what the hell is that choppy effect?  that is cool.
+                </div>
+                <div class="comment">
+                    <strong>voltaire</strong>: Ive been listening to this song like every day for a week, and I feel like a jackass for not posting a comment so here ya go...
+
+I like it, because it like what I think insanity might sound like if you were locked in a padded room with this going through your head for all time..
+
+I really like the idea of this being a quick little thing you made, kinda like a sketch... its part of the musical process you dont get to hear much...
+                </div>
+            </div>
+            <div class="item-comments">
+                <h5>Cutting Through.mp3 by Edipo</h5>
+                
+                <div class="comment">
+                    <strong>Captain Carnage</strong>: \m/,
+
+freakin devil horns yo
+                </div>
+                <div class="comment">
+                    <strong>Captain Carnage</strong>: \m/,
+
+freakin devil horns yo
+                </div>
+                <div class="comment">
+                    <strong>Captain Carnage</strong>: \m/,
+
+freakin devil horns yo
+                </div>
+            </div>
+            <div class="item-comments">
+                <h5>Fngad Utav Nordens Sjl by autumnaton</h5>
+                
+                <div class="comment">
+                    <strong>autumnaton</strong>: I forgot to mention something! A cookie to whoever can name the band who's song titles compose the title of the story as well as the foreign remarks.
+                </div>
+                <div class="comment">
+                    <strong>autumnaton</strong>: I forgot to mention something! A cookie to whoever can name the band who's song titles compose the title of the story as well as the foreign remarks.
+                </div>
+                <div class="comment">
+                    <strong>autumnaton</strong>: I forgot to mention something! A cookie to whoever can name the band who's song titles compose the title of the story as well as the foreign remarks.
+                </div>
+            </div>
+            <div class="item-comments">
+                <h5>clockwork tower by Skeller</h5>
+                
+                <div class="comment">
+                    <strong>Skydog Hex</strong>: I wish I could doodle like this. The sense of scale gives a feel like it\'s a tower for faries or smurfs. Not an insult there, just saying.
+                </div>
+                <div class="comment">
+                    <strong>Skydog Hex</strong>: I wish I could doodle like this. The sense of scale gives a feel like it\'s a tower for faries or smurfs. Not an insult there, just saying.
+                </div>
+                <div class="comment">
+                    <strong>metaldrummer9591</strong>: cool, very cool, it looks like a tower from Warcraft III.
+                </div>
+            </div>
+            <div class="item-comments">
+                <h5>Vico Surge by Edipo</h5>
+                
+                <div class="comment">
+                    <strong>Admiral_Dread</strong>: Good stuff, but I must ask myself what exactly was he shooting at...
+                </div>
+                <div class="comment">
+                    <strong>Edipo</strong>: Who knows. Claudio just made the drawing based on what he received so, heh, this is what came.
+                </div>
+                <div class="comment">
+                    <strong>Edipo</strong>: If you wonder, this is me, an exact copy of me wielding an AK-47 and yeah that's my look, I sometimes look like I'm really fucking pissed off when I'm actually in neutral mode or I just don't give a shit mode.
+                </div>
+            </div>
+            <div class="item-comments">
+                <h5>Basonimus by Edipo</h5>
+                
+                <div class="comment">
+                    <strong>Edipo</strong>: Something weird you might notice here is that there are no frets, fretless basses do exist and they are supposed to give the player a more experimental and artistic sound, also the tuning knobs look a little out of place. They are kinda out of place and the top of the neck is almost impossible to reach but the knobs are actually still usable because the strings go around the back of the neck... which actually makes it more impossible to play the first frets but fuck it. Enjoy!
+                </div>
+                <div class="comment">
+                    <strong>Admiral_Dread</strong>: Now, everyone... Bow before your new god, Basonimus!
+                </div>
+                <div class="comment">
+                    <strong>AmmoJack</strong>: I dig the body art, but from a musician's standpoint the design is pretty impractical. Main points are the fretboard, which goes all the way to the bridge, which not only wouldn't be accessable for playing, but also blocks any space for pickups and the tuning pegs working the way they do, which would cause for a mega heavy head (for gnarly neck dive) and also likely heavy tuning instability with a lot of string breaks from the heavy pressure at the nut....looks cool as hell though, I'd just like to see the idea applied to a second more realistic body/neck design!
+                </div>
+            </div>
+            <div class="item-comments">
+                <h5>Border Crossing Chapter XXVIII by Edipo</h5>
+                
+                <div class="comment">
+                    <strong>Emerson</strong>: Goddamn right you're getting lazy, there wasn't nearly enough violence or moonshine or anything like that.
+                </div>
+                <div class="comment">
+                    <strong>Edipo</strong>: I know!
+                </div>
+                <div class="comment">
+                    <strong>Captain Carnage</strong>: I dunno...personally I think this new season needs to be rewritten.  It's basic idea is good...but god damnit man...some of these lines...it's like watching a B-Movie on Sci-Fi...the lines are terrible!!
+                </div>
+            </div>
+            <div class="item-comments">
+                <h5>Necro Terror.mp3 by Edipo</h5>
+                
+                <div class="comment">
+                    <strong>Captain Carnage</strong>: sweeeet
+                </div>
+                <div class="comment">
+                    <strong>AmmoJack</strong>: man, nothings worse than when a melody hits you in the shower and there's nothing you can do about it until you get out and get a guitar in your hands...and I hate playing with damp hands...
+
+The song sounds pretty bitchin', you have a nice thick tone going on too. It'd be nice to see it taken to the next level with some bass, drums, and vocals.
+
+..."monsters crawling from the earth, reaching skyward stagger forth
+in their hands clutch bloody flesh, marching on they reek of death
+
+one by one we all succumb, to the disease consuming every one
+we must escape this undead madness, lest the shambling masses kill us all"
+
+...yeah...
+                </div>
+            </div>
+            <div class="item-comments">
+                <h5>Experimental Meca MG.JPG by Edipo</h5>
+                
+                <div class="comment">
+                    <strong>metaldrummer9591</strong>: This is really good for Microsoft paint, nice job!
+                </div>
+                <div class="comment">
+                    <strong>Skeller</strong>: This is really cool. It\'s good to see you branching out into different media. Plus it a cool ass robot. I\'d like to see an action pic of it slaughtering helpless meatbags.
+                </div>
+            </div>
+    </div>
+
+    <div id="members" class="tab-content">
+        <h3>Community Members</h3>
+        <p>Members who participated in the archived discussions:</p>
+        <div class="user-list">
+            <span class="user-tag">.:ÃƒÂ</span><span class="user-tag">AK-47</span><span class="user-tag">Admiral_Dread</span><span class="user-tag">AltraWave7</span><span class="user-tag">AmmoJack</span><span class="user-tag">Anthem</span><span class="user-tag">Bitterman</span><span class="user-tag">BlackDog</span><span class="user-tag">Bryan</span><span class="user-tag">Captain Carnage</span><span class="user-tag">Cerberus</span><span class="user-tag">Clif Henning</span><span class="user-tag">Comikaze</span><span class="user-tag">DEDTEXX</span><span class="user-tag">Edipo</span><span class="user-tag">Emerson</span><span class="user-tag">Good Ol Boy</span><span class="user-tag">Leroy Putty</span><span class="user-tag">Locke Taelos</span><span class="user-tag">Migu</span><span class="user-tag">Mr-Terrence</span><span class="user-tag">MysticMantis</span><span class="user-tag">Professor</span><span class="user-tag">Rad-X</span><span class="user-tag">Raymondo2000</span><span class="user-tag">Rebo</span><span class="user-tag">Rifter17</span><span class="user-tag">Sanctusorium</span><span class="user-tag">Skeller</span><span class="user-tag">Skenvoy</span><span class="user-tag">Skydog Hex</span><span class="user-tag">Tater</span><span class="user-tag">absinthe</span><span class="user-tag">autumnaton</span><span class="user-tag">gutterclutch</span><span class="user-tag">metaldrummer9591</span><span class="user-tag">molotov</span><span class="user-tag">patocolypse</span><span class="user-tag">voltaire</span>
+        </div>
+    </div>
+
+    <div class="archive-notice" style="margin-top: 2rem;">
+        <h3>About These Conversations</h3>
+        <p>
+            These discussions were recovered from Wayback Machine archives of the Poison the Mind forum
+            and gallery. Only a fraction of the original conversations could be preserved, but they
+            offer a glimpse into the creative community that thrived here.
+        </p>
+    </div>
+</div>
+
+<footer>
+    <p><strong>Poison the Mind Memorial Archive</strong></p>
+    <p>Preserving the creative legacy of poisonthemind.com</p>
+    <p>Founded by Matthew "Bitterman" Hall - 2004-2010</p>
+</footer>
+
+<script>
+document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+        this.classList.add('active');
+        document.getElementById(this.dataset.tab).classList.add('active');
+    });
+});
+</script>
+</body>
+</html>

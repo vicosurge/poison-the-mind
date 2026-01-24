@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Gallery - Poison the Mind Memorial</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1.5rem;
+            padding: 1rem 0;
+        }
+        .gallery-item {
+            background: #222;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            display: block;
+        }
+        .gallery-info {
+            padding: 0.75rem;
+        }
+        .gallery-info h4 {
+            margin: 0 0 0.25rem 0;
+            font-size: 0.95rem;
+            color: #F16565;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .gallery-info .artist {
+            margin: 0 0 0.25rem 0;
+            font-size: 0.85rem;
+            color: #ccc;
+        }
+        .gallery-info .tags {
+            margin: 0;
+            font-size: 0.75rem;
+            color: #888;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .filter-section {
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: #1a1a1a;
+            border-radius: 8px;
+        }
+        .filter-section h3 {
+            margin: 0 0 0.75rem 0;
+            color: #F16565;
+        }
+        .filter-btn {
+            background: #333;
+            color: #ddd;
+            border: none;
+            padding: 0.4rem 0.8rem;
+            margin: 0.25rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            transition: background 0.2s;
+        }
+        .filter-btn:hover, .filter-btn.active {
+            background: #F16565;
+            color: #fff;
+        }
+        .stats-bar {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background: #1a1a1a;
+            border-radius: 8px;
+        }
+        .stats-bar span {
+            color: #888;
+        }
+        .stats-bar strong {
+            color: #F16565;
+        }
+        .gallery-link {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="site-title">
+        <h1><a href="/">[ poison the mind ]</a></h1>
+        <p class="site-subtitle">Lethal Dosage of Creativity</p>
+    </div>
+    <div class="memorial-notice">
+        <p>A Memorial Archive - Preserving the creative works of a beloved community (2004-2010)</p>
+    </div>
+</header>
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="authors/index.html">Authors</a></li>
+        <li><a href="gallery.html" class="active">Art Gallery</a></li>
+        <li><a href="archive/timeline.html">Timeline</a></li>
+        <li><a href="archive/community.html">Community</a></li>
+        <li><a href="conversations.html">Conversations</a></li>
+    </ul>
+</nav>
+
+<div class="container">
+    <h2>Art Gallery</h2>
+    <p>Artwork recovered from the Poison the Mind archive. Click any image to view the full size version.</p>
+
+    <div class="stats-bar">
+        <span><strong>90</strong> artworks recovered</span>
+        <span><strong>15</strong> artists represented</span>
+    </div>
+
+    <div class="filter-section">
+        <h3>Filter by Artist</h3>
+        <button class="filter-btn active" data-filter="all">All Artists</button>
+        <button class="filter-btn" data-filter="Admiral_Dread">Admiral_Dread</button>
+<button class="filter-btn" data-filter="Anthem">Anthem</button>
+<button class="filter-btn" data-filter="Captain Carnage">Captain Carnage</button>
+<button class="filter-btn" data-filter="Comikaze">Comikaze</button>
+<button class="filter-btn" data-filter="Edipo">Edipo</button>
+<button class="filter-btn" data-filter="Good Ol Boy">Good Ol Boy</button>
+<button class="filter-btn" data-filter="Mr-Terrence">Mr-Terrence</button>
+<button class="filter-btn" data-filter="Sanctusorium">Sanctusorium</button>
+<button class="filter-btn" data-filter="Sean">Sean</button>
+<button class="filter-btn" data-filter="Secs">Secs</button>
+<button class="filter-btn" data-filter="Skeller">Skeller</button>
+<button class="filter-btn" data-filter="Skenvoy">Skenvoy</button>
+<button class="filter-btn" data-filter="Skydog Hex">Skydog Hex</button>
+<button class="filter-btn" data-filter="Unknown Artist">Unknown Artist</button>
+<button class="filter-btn" data-filter="Voltaire">Voltaire</button>
+    </div>
+
+    <div class="gallery-container">
+        
+        <div class="gallery-item" data-artist="Admiral_Dread" data-tags="">
+            <a href="images/art/artwork-admi1107291320.jpg" class="gallery-link" target="_blank">
+                <img src="images/thumbs/artwork-admi1107291320.jpg" alt="Artwork Admi1107291320" loading="lazy">
+            </a>
+            <div class="gallery-info">
+                <h4>Artwork Admi1107291320</h4>
+                <p class="artist">by Admiral_Dread</p>
+                <p class="tags">Untagged</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-artist="Anthem" data-tags="finder mac pumpkin halloween">
+            <a href="images/art/finder-pumpkin.jpg" class="gallery-link" target="_blank">
+                <img src="images/thumbs/finder-pumpkin.jpg" alt="Finder Pumpkin" loading="lazy">
+            </a>
+            <div class="gallery-info">
+                <h4>Finder Pumpkin</h4>
+                <p class="artist">by Anthem</p>
+                <p class="tags">finder, mac, pumpkin, halloween</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-artist="Anthem" data-tags="pumpkin linux windows halloween mac finder tux">
+            <a href="images/art/mac-o-lanterns.jpg" class="gallery-link" target="_blank">
+                <img src="images/thumbs/mac-o-lanterns.jpg" alt="Mac-o'-Lanterns" loading="lazy">
+            </a>
+            <div class="gallery-info">
+                <h4>Mac-o'-Lanterns</h4>
+                <p class="artist">by Anthem</p>
+                <p class="tags">pumpkin, linux, windows, halloween, mac</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-artist="Anthem" data-tags="tux pumpkin halloween linux">
+            <a href="images/art/tux-pumpkin.jpg" class="gallery-link" target="_blank">
+                <img src="images/thumbs/tux-pumpkin.jpg" alt="Tux Pumpkin" loading="lazy">
+            </a>
+            <div class="gallery-info">
+                <h4>Tux Pumpkin</h4>
+                <p class="artist">by Anthem</p>
+                <p class="tags">tux, pumpkin, halloween, linux</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-artist="Anthem" data-tags="error pumpkin warning windows halloween">
+            <a href="images/art/windows-pumpkin.jpg" class="gallery-link" target="_blank">
+                <img src="images/thumbs/windows-pumpkin.jpg" alt="Windows Pumpkin" loading="lazy">
+            </a>
+            <div class="gallery-info">
+                <h4>Windows Pumpkin</h4>
+                <p class="artist">by Anthem</p>
+                <p class="tags">error, pumpkin, warning, windows, halloween</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-artist="Captain Carnage" data-tags="photofilter landscape science fiction terrain">
+            <a href="images/art/black-crystal-dunesjpg.jpg" class="gallery-link" target="_blank">
+                <img src="images/thumbs/black-crystal-dunesjpg.jpg" alt="Black Crystal Dunes.jpg" loading="lazy">
+            </a>
+            <div class="gallery-info">
+                <h4>Black Crystal Dunes.jpg</h4>
+                <p class="artist">by Captain Carnage</p>
+                <p class="tags">photofilter, landscape, science fiction, terrain</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-artist="Captain Carnage" data-tags="Burger Fast Food Chicken Sign">
+            <a href="images/art/chicken-burgerjpg.jpg" class="gallery-link" target="_blank">
+                <img src="images/thumbs/chicken-burgerjpg.jpg" alt="Chicken Burger.jpg" loading="lazy">
+            </a>
+            <div class="gallery-info">
+                <h4>Chicken Burger.jpg</h4>
+                <p class="artist">by Captain Carnage</p>
+                <p class="tags">Burger, Fast, Food, Chicken, Sign</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-artist="Comikaze" data-tags="">
+            <a href="images/art/artwork-comi1094190255.jpg" class="gallery-link" target="_blank">
+                <img src="images/thumbs/artwork-comi1094190255.jpg" alt="Artwork Comi1094190255" loading="lazy">
+            </a>
+            <div class="gallery-info">
+                <h4>Artwork Comi1094190255</h4>
+                <p class="artist">by Comikaze</p>
+                <p class="tags">Untagged</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-artist="Edipo" data-tags="Meca Robot Mecha Machine">
+            <a href="images/art/experimental-meca-mgjpg.jpg" class="gallery-link" target="_blank">
+                <img src="images/thumbs/experimental-meca-mgjpg.jpg" alt="Experimental Meca MG.JPG" loading="lazy">
+            </a>
+            <div class="gallery-info">
+                <h4>Experimental Meca MG.JPG</h4>
+                <p class="artist">by Edipo</p>
+                <p class="tags">Meca, Robot, Mecha, Machine</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-artist="Edipo" data-tags="Mech Robot Scout.">
+            <a href="images/art/standing-scout-mechjpg.jpg" class="gallery-link" target="_blank">
+                <img src="images/thumbs/standing-scout-mechjpg.jpg" alt="Standing Scout Mech.JPG" loading="lazy">
+            </a>
+            <div class="gallery-info">
+                <h4>Standing Scout Mech.JPG</h4>
+                <p class="artist">by Edipo</p>
+                <p class="tags">Mech, Robot, Scout.</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-artist="Good Ol Boy" data-tags="">
+            <a href="images/art/artwork-good1094092769.jpg" class="gallery-link" target="_blank">
+                <img src="images/thumbs/artwork-good1094092769.jpg" alt="Artwork Good1094092769" loading="lazy">
+            </a>
+            <div class="gallery-info">
+                <h4>Artwork Good1094092769</h4>
+                <p class="artist">by Good Ol Boy</p>
+                <p class="tags">Untagged</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-artist="Mr-Terrence" data-tags="">
+            <a href="images/art/aerial-trooper.jpg" class="gallery-link" target="_blank">
+                <img src="images/thumbs/aerial-trooper.jpg" alt="Aerial Trooper" loading="lazy">
+            </a>
+            <div class="gallery-info">
+                <h4>Aerial Trooper</h4>
+                <p class="artist">by Mr-Terrence</p>
+                <p class="tags">Untagged</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-artist="Sanctusorium" data-tags="">
+            <a href="images/art/autumn-treejpg.jpg" class="gallery-link" target="_blank">
+                <img src="images/thumbs/autumn-treejpg.jpg" alt="Autumn Tree.jpg" loading="lazy">
+            </a>
+            <div class="gallery-info">
+                <h4>Autumn Tree.jpg</h4>
+                <p class="artist">by Sanctusorium</p>
+                <p class="tags">Untagged</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-artist="Sanctusorium" data-tags="">
+            <a href="images/art/signjpg.jpg" class="gallery-link" target="_blank">
+                <img src="images/thumbs/signjpg.jpg" alt="sign.jpg" loading="lazy">
+            </a>
+            <div class="gallery-info">
+                <h4>sign.jpg</h4>
+                <p class="artist">by Sanctusorium</p>
+                <p class="tags">Untagged</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-artist="Sean" data-tags="">
+            <a href="images/art/artwork-sean1093244170.jpg" class="gallery-link" target="_blank">
+                <img src="images/thumbs/artwork-sean1093244170.jpg" alt="Artwork Sean1093244170" loading="lazy">
+            </a>
+            <div class="gallery-info">
+                <h4>Artwork Sean1093244170</h4>
+                <p class="artist">by Sean</p>
+                <p class="tags">Untagged</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-artist="Sean" data-tags="">
+            <a href="images/art/artwork-sean1093244286.jpg" class="gallery-link" target="_blank">
+                <img src="images/thumbs/artwork-sean1093244286.jpg" alt="Artwork Sean1093244286" loading="lazy">
+            </a>
+            <div class="gallery-info">
+                <h4>Artwork Sean1093244286</h4>
+                <p class="artist">by Sean</p>
+                <p class="tags">Untagged</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-artist="Sean" data-tags="">
+            <a href="images/art/artwork-sean1093244372.jpg" class="gallery-link" target="_blank">
+                <img src="images/thumbs/artwork-sean1093244372.jpg" alt="Artwork Sean1093244372" loading="lazy">
+            </a>
+            <div class="gallery-info">
+                <h4>Artwork Sean1093244372</h4>
+                <p class="artist">by Sean</p>
+                <p class="tags">Untagged</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-artist="Sean" data-tags="">
+            <a href="images/art/artwork-sean1093244454.jpg" class="gallery-link" target="_blank">
+                <img src="images/thumbs/artwork-sean1093244454.jpg" alt="Artwork Sean1093244454" loading="lazy">
+            </a>
+            <div class="gallery-info">
+                <h4>Artwork Sean1093244454</h4>
+                <p class="artist">by Sean</p>
+                <p class="tags">Untagged</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-artist="Secs" data-tags="">
+            <a href="images/art/artwork-secs1094356761.jpg" class="gallery-link" target="_blank">
+                <img src="images/thumbs/artwork-secs1094356761.jpg" alt="Artwork Secs1094356761" loading="lazy">
+            </a>
+            <div class="gallery-info">
+                <h4>Artwork Secs1094356761</h4>
+                <p class="artist">by Secs</p>
+                <p class="tags">Untagged</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-artist="Skeller" data-tags="">
+            <a href="images/art/flying-flaming-rat.jpg" class="gallery-link" target="_blank">
+                <img src="images/thumbs/flying-flaming-rat.jpg" alt="Flying Flaming Rat" loading="lazy">
+            </a>
+            <div class="gallery-info">
+                <h4>Flying Flaming Rat</h4>
+                <p class="artist">by Skeller</p>
+                <p class="tags">Untagged</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-artist="Skeller" data-tags="Woe Madness">
+            <a href="images/art/kingoftheworld.jpg" class="gallery-link" target="_blank">
+                <img src="images/thumbs/kingoftheworld.jpg" alt="Kingoftheworld" loading="lazy">
+            </a>
+            <div class="gallery-info">
+                <h4>Kingoftheworld</h4>
+                <p class="artist">by Skeller</p>
+                <p class="tags">Woe, Madness</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-artist="Skeller" data-tags="Alien mechanic">
+            <a href="images/art/wosserian-mechanic.jpg" class="gallery-link" target="_blank">
+                <img src="images/thumbs/wosserian-mechanic.jpg" alt="Wosserian Mechanic" loading="lazy">
+            </a>
+            <div class="gallery-info">
+                <h4>Wosserian Mechanic</h4>
+                <p class="artist">by Skeller</p>
+                <p class="tags">Alien, mechanic</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-artist="Skeller" data-tags="wizards Arcane Technologies">
+            <a href="images/art/clockwork-tower.jpg" class="gallery-link" target="_blank">
+                <img src="images/thumbs/clockwork-tower.jpg" alt="clockwork tower" loading="lazy">
+            </a>
+            <div class="gallery-info">
+                <h4>clockwork tower</h4>
+                <p class="artist">by Skeller</p>
+                <p class="tags">wizards, Arcane Technologies</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-artist="Skenvoy" data-tags="">
+            <a href="images/art/artwork-sken1097644289.jpg" class="gallery-link" target="_blank">
+                <img src="images/thumbs/artwork-sken1097644289.jpg" alt="Artwork Sken1097644289" loading="lazy">
+            </a>
+            <div class="gallery-info">
+                <h4>Artwork Sken1097644289</h4>
+                <p class="artist">by Skenvoy</p>
+                <p class="tags">Untagged</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-artist="Skenvoy" data-tags="">
+            <a href="images/art/artwork-sken1097653059.jpg" class="gallery-link" target="_blank">
+                <img src="images/thumbs/artwork-sken1097653059.jpg" alt="Artwork Sken1097653059" loading="lazy">
+            </a>
+            <div class="gallery-info">
+                <h4>Artwork Sken1097653059</h4>
+                <p class="artist">by Skenvoy</p>
+                <p class="tags">Untagged</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-artist="Skydog Hex" data-tags="">
+            <a href="images/art/artwork-skyd1107133669.jpg" class="gallery-link" target="_blank">
+                <img src="images/thumbs/artwork-skyd1107133669.jpg" alt="Artwork Skyd1107133669" loading="lazy">
+            </a>
+            <div class="gallery-info">
+                <h4>Artwork Skyd1107133669</h4>
+                <p class="artist">by Skydog Hex</p>
+                <p class="tags">Untagged</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-artist="Unknown Artist" data-tags="">
+            <a href="images/art/artwork-100_7ip68zvbmsho.jpg" class="gallery-link" target="_blank">
+                <img src="images/thumbs/artwork-100_7ip68zvbmsho.jpg" alt="Artwork 100_7Ip68ZVBMShO" loading="lazy">
+            </a>
+            <div class="gallery-info">
+                <h4>Artwork 100_7Ip68ZVBMShO</h4>
+                <p class="artist">by Unknown Artist</p>
+                <p class="tags">Untagged</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-artist="Unknown Artist" data-tags="">
+            <a href="images/art/artwork-100_8yov3ljsdmry.jpg" class="gallery-link" target="_blank">
+                <img src="images/thumbs/artwork-100_8yov3ljsdmry.jpg" alt="Artwork 100_8YoV3lJsDMRY" loading="lazy">
+            </a>
+            <div class="gallery-info">
+                <h4>Artwork 100_8YoV3lJsDMRY</h4>
+                <p class="artist">by Unknown Artist</p>
+                <p class="tags">Untagged</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-artist="Unknown Artist" data-tags="">
+            <a href="images/art/artwork-100_copdnxmnhbs9.jpg" class="gallery-link" target="_blank">
+                <img src="images/thumbs/artwork-100_copdnxmnhbs9.jpg" alt="Artwork 100_CoPdnxMnHBS9" loading="lazy">
+            </a>
+            <div class="gallery-info">
+                <h4>Artwork 100_CoPdnxMnHBS9</h4>
+                <p class="artist">by Unknown Artist</p>
+                <p class="tags">Untagged</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-artist="Unknown Artist" data-tags="">
+            <a href="images/art/artwork-100_diboddtnb6hf.jpg" class="gallery-link" target="_blank">
+                <img src="images/thumbs/artwork-100_diboddtnb6hf.jpg" alt="Artwork 100_DiBoDDTnB6hf" loading="lazy">
+            </a>
+            <div class="gallery-info">
+                <h4>Artwork 100_DiBoDDTnB6hf</h4>
+                <p class="artist">by Unknown Artist</p>
+                <p class="tags">Untagged</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-artist="Unknown Artist" data-tags="">
+            <a href="images/art/artwork-100_fqyy6eresvfs.jpg" class="gallery-link" target="_blank">
+                <img src="images/thumbs/artwork-100_fqyy6eresvfs.jpg" alt="Artwork 100_FQYy6eresvfs" loading="lazy">
+            </a>
+            <div class="gallery-info">
+                <h4>Artwork 100_FQYy6eresvfs</h4>
+                <p class="artist">by Unknown Artist</p>
+                <p class="tags">Untagged</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-artist="Unknown Artist" data-tags="">
+            <a href="images/art/artwork-100_tnmybqeyvqp5.jpg" class="gallery-link" target="_blank">
+                <img src="images/thumbs/artwork-100_tnmybqeyvqp5.jpg" alt="Artwork 100_TnMYBQEYvQP5" loading="lazy">
+            </a>
+            <div class="gallery-info">
+                <h4>Artwork 100_TnMYBQEYvQP5</h4>
+                <p class="artist">by Unknown Artist</p>
+                <p class="tags">Untagged</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-artist="Unknown Artist" data-tags="">
+            <a href="images/art/artwork-100_emex3ydhjtnr.jpg" class="gallery-link" target="_blank">
+                <img src="images/thumbs/artwork-100_emex3ydhjtnr.jpg" alt="Artwork 100_emex3ydhjTNR" loading="lazy">
+            </a>
+            <div class="gallery-info">
+                <h4>Artwork 100_emex3ydhjTNR</h4>
+                <p class="artist">by Unknown Artist</p>
+                <p class="tags">Untagged</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-artist="Unknown Artist" data-tags="">
+            <a href="images/art/artwork-107_gqxxbgvjuz0f.jpg" class="gallery-link" target="_blank">
+                <img src="images/thumbs/artwork-107_gqxxbgvjuz0f.jpg" alt="Artwork 107_gQxxbGvJUz0f" loading="lazy">
+            </a>
+            <div class="gallery-info">
+                <h4>Artwork 107_gQxxbGvJUz0f</h4>
+                <p class="artist">by Unknown Artist</p>
+                <p class="tags">Untagged</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-artist="Unknown Artist" data-tags="">
+            <a href="images/art/artwork-1401152154881.jpg" class="gallery-link" target="_blank">
+                <img src="images/thumbs/artwork-1401152154881.jpg" alt="Artwork 1401152154881" loading="lazy">
+            </a>
+            <div class="gallery-info">
+                <h4>Artwork 1401152154881</h4>
+                <p class="artist">by Unknown Artist</p>
+                <p class="tags">Untagged</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-artist="Unknown Artist" data-tags="">
+            <a href="images/art/artwork-1401152154975.jpg" class="gallery-link" target="_blank">
+                <img src="images/thumbs/artwork-1401152154975.jpg" alt="Artwork 1401152154975" loading="lazy">
+            </a>
+            <div class="gallery-info">
+                <h4>Artwork 1401152154975</h4>
+                <p class="artist">by Unknown Artist</p>
+                <p class="tags">Untagged</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-artist="Unknown Artist" data-tags="">
+            <a href="images/art/artwork-1401152509283.jpg" class="gallery-link" target="_blank">
+                <img src="images/thumbs/artwork-1401152509283.jpg" alt="Artwork 1401152509283" loading="lazy">
+            </a>
+            <div class="gallery-info">
+                <h4>Artwork 1401152509283</h4>
+                <p class="artist">by Unknown Artist</p>
+                <p class="tags">Untagged</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-artist="Unknown Artist" data-tags="">
+            <a href="images/art/artwork-1481150859624.jpg" class="gallery-link" target="_blank">
+                <img src="images/thumbs/artwork-1481150859624.jpg" alt="Artwork 1481150859624" loading="lazy">
+            </a>
+            <div class="gallery-info">
+                <h4>Artwork 1481150859624</h4>
+                <p class="artist">by Unknown Artist</p>
+                <p class="tags">Untagged</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-artist="Unknown Artist" data-tags="">
+            <a href="images/art/artwork-1481151123907.jpg" class="gallery-link" target="_blank">
+                <img src="images/thumbs/artwork-1481151123907.jpg" alt="Artwork 1481151123907" loading="lazy">
+            </a>
+            <div class="gallery-info">
+                <h4>Artwork 1481151123907</h4>
+                <p class="artist">by Unknown Artist</p>
+                <p class="tags">Untagged</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-artist="Unknown Artist" data-tags="">
+            <a href="images/art/artwork-1481151643263.jpg" class="gallery-link" target="_blank">
+                <img src="images/thumbs/artwork-1481151643263.jpg" alt="Artwork 1481151643263" loading="lazy">
+            </a>
+            <div class="gallery-info">
+                <h4>Artwork 1481151643263</h4>
+                <p class="artist">by Unknown Artist</p>
+                <p class="tags">Untagged</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-artist="Unknown Artist" data-tags="">
+            <a href="images/art/artwork-148_qqyi3cvzmhnb.jpg" class="gallery-link" target="_blank">
+                <img src="images/thumbs/artwork-148_qqyi3cvzmhnb.jpg" alt="Artwork 148_qQyI3cVzMHnB" loading="lazy">
+            </a>
+            <div class="gallery-info">
+                <h4>Artwork 148_qQyI3cVzMHnB</h4>
+                <p class="artist">by Unknown Artist</p>
+                <p class="tags">Untagged</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-artist="Unknown Artist" data-tags="">
+            <a href="images/art/artwork-148_zbmuq5j8aogi.jpg" class="gallery-link" target="_blank">
+                <img src="images/thumbs/artwork-148_zbmuq5j8aogi.jpg" alt="Artwork 148_zbmUq5j8Aogi" loading="lazy">
+            </a>
+            <div class="gallery-info">
+                <h4>Artwork 148_zbmUq5j8Aogi</h4>
+                <p class="artist">by Unknown Artist</p>
+                <p class="tags">Untagged</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-artist="Unknown Artist" data-tags="">
+            <a href="images/art/artwork-171152222969.jpg" class="gallery-link" target="_blank">
+                <img src="images/thumbs/artwork-171152222969.jpg" alt="Artwork 171152222969" loading="lazy">
+            </a>
+            <div class="gallery-info">
+                <h4>Artwork 171152222969</h4>
+                <p class="artist">by Unknown Artist</p>
+                <p class="tags">Untagged</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-artist="Unknown Artist" data-tags="">
+            <a href="images/art/artwork-174_dpzbdok8hvse.jpg" class="gallery-link" target="_blank">
+                <img src="images/thumbs/artwork-174_dpzbdok8hvse.jpg" alt="Artwork 174_DPZBDok8hVSe" loading="lazy">
+            </a>
+            <div class="gallery-info">
+                <h4>Artwork 174_DPZBDok8hVSe</h4>
+                <p class="artist">by Unknown Artist</p>
+                <p class="tags">Untagged</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-artist="Unknown Artist" data-tags="">
+            <a href="images/art/artwork-174_lqdqosmr9sfy.jpg" class="gallery-link" target="_blank">
+                <img src="images/thumbs/artwork-174_lqdqosmr9sfy.jpg" alt="Artwork 174_LQdqoSmR9Sfy" loading="lazy">
+            </a>
+            <div class="gallery-info">
+                <h4>Artwork 174_LQdqoSmR9Sfy</h4>
+                <p class="artist">by Unknown Artist</p>
+                <p class="tags">Untagged</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-artist="Unknown Artist" data-tags="">
+            <a href="images/art/artwork-174_nf9rb9baubbi.jpg" class="gallery-link" target="_blank">
+                <img src="images/thumbs/artwork-174_nf9rb9baubbi.jpg" alt="Artwork 174_NF9rb9bAubBi" loading="lazy">
+            </a>
+            <div class="gallery-info">
+                <h4>Artwork 174_NF9rb9bAubBi</h4>
+                <p class="artist">by Unknown Artist</p>
+                <p class="tags">Untagged</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-artist="Unknown Artist" data-tags="">
+            <a href="images/art/artwork-174_vcu3hr8gkz0s.jpg" class="gallery-link" target="_blank">
+                <img src="images/thumbs/artwork-174_vcu3hr8gkz0s.jpg" alt="Artwork 174_VCU3hr8GKz0s" loading="lazy">
+            </a>
+            <div class="gallery-info">
+                <h4>Artwork 174_VCU3hr8GKz0s</h4>
+                <p class="artist">by Unknown Artist</p>
+                <p class="tags">Untagged</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-artist="Unknown Artist" data-tags="">
+            <a href="images/art/artwork-174_yx8mj269bubz.jpg" class="gallery-link" target="_blank">
+                <img src="images/thumbs/artwork-174_yx8mj269bubz.jpg" alt="Artwork 174_yX8Mj269bUbZ" loading="lazy">
+            </a>
+            <div class="gallery-info">
+                <h4>Artwork 174_yX8Mj269bUbZ</h4>
+                <p class="artist">by Unknown Artist</p>
+                <p class="tags">Untagged</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-artist="Unknown Artist" data-tags="">
+            <a href="images/art/artwork-190_9rzz0yaj6fae.jpg" class="gallery-link" target="_blank">
+                <img src="images/thumbs/artwork-190_9rzz0yaj6fae.jpg" alt="Artwork 190_9RzZ0yaj6fAE" loading="lazy">
+            </a>
+            <div class="gallery-info">
+                <h4>Artwork 190_9RzZ0yaj6fAE</h4>
+                <p class="artist">by Unknown Artist</p>
+                <p class="tags">Untagged</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-artist="Unknown Artist" data-tags="">
+            <a href="images/art/artwork-190_cv4s1tyfovkh.jpg" class="gallery-link" target="_blank">
+                <img src="images/thumbs/artwork-190_cv4s1tyfovkh.jpg" alt="Artwork 190_Cv4s1TYFOvKh" loading="lazy">
+            </a>
+            <div class="gallery-info">
+                <h4>Artwork 190_Cv4s1TYFOvKh</h4>
+                <p class="artist">by Unknown Artist</p>
+                <p class="tags">Untagged</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-artist="Unknown Artist" data-tags="">
+            <a href="images/art/artwork-190_g72xx681miqs.jpg" class="gallery-link" target="_blank">
+                <img src="images/thumbs/artwork-190_g72xx681miqs.jpg" alt="Artwork 190_G72Xx681MIQS" loading="lazy">
+            </a>
+            <div class="gallery-info">
+                <h4>Artwork 190_G72Xx681MIQS</h4>
+                <p class="artist">by Unknown Artist</p>
+                <p class="tags">Untagged</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-artist="Unknown Artist" data-tags="">
+            <a href="images/art/artwork-190_gzzcnintm2uc.jpg" class="gallery-link" target="_blank">
+                <img src="images/thumbs/artwork-190_gzzcnintm2uc.jpg" alt="Artwork 190_GzzCNINTM2uc" loading="lazy">
+            </a>
+            <div class="gallery-info">
+                <h4>Artwork 190_GzzCNINTM2uc</h4>
+                <p class="artist">by Unknown Artist</p>
+                <p class="tags">Untagged</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-artist="Unknown Artist" data-tags="">
+            <a href="images/art/artwork-190_igubi8mqvimj.jpg" class="gallery-link" target="_blank">
+                <img src="images/thumbs/artwork-190_igubi8mqvimj.jpg" alt="Artwork 190_IGUBI8mQViMj" loading="lazy">
+            </a>
+            <div class="gallery-info">
+                <h4>Artwork 190_IGUBI8mQViMj</h4>
+                <p class="artist">by Unknown Artist</p>
+                <p class="tags">Untagged</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-artist="Unknown Artist" data-tags="">
+            <a href="images/art/artwork-190_lrzucj2vnzl3.jpg" class="gallery-link" target="_blank">
+                <img src="images/thumbs/artwork-190_lrzucj2vnzl3.jpg" alt="Artwork 190_LrZucj2vnzL3" loading="lazy">
+            </a>
+            <div class="gallery-info">
+                <h4>Artwork 190_LrZucj2vnzL3</h4>
+                <p class="artist">by Unknown Artist</p>
+                <p class="tags">Untagged</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-artist="Unknown Artist" data-tags="">
+            <a href="images/art/artwork-190_zkz2jfokysnn.jpg" class="gallery-link" target="_blank">
+                <img src="images/thumbs/artwork-190_zkz2jfokysnn.jpg" alt="Artwork 190_ZkZ2JFOkySnN" loading="lazy">
+            </a>
+            <div class="gallery-info">
+                <h4>Artwork 190_ZkZ2JFOkySnN</h4>
+                <p class="artist">by Unknown Artist</p>
+                <p class="tags">Untagged</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-artist="Unknown Artist" data-tags="">
+            <a href="images/art/artwork-190_afniskbxbvre.jpg" class="gallery-link" target="_blank">
+                <img src="images/thumbs/artwork-190_afniskbxbvre.jpg" alt="Artwork 190_afnIsKBXBVrE" loading="lazy">
+            </a>
+            <div class="gallery-info">
+                <h4>Artwork 190_afnIsKBXBVrE</h4>
+                <p class="artist">by Unknown Artist</p>
+                <p class="tags">Untagged</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-artist="Unknown Artist" data-tags="">
+            <a href="images/art/artwork-190_cuvhsulmhvt1.jpg" class="gallery-link" target="_blank">
+                <img src="images/thumbs/artwork-190_cuvhsulmhvt1.jpg" alt="Artwork 190_cUVhsUlmhVT1" loading="lazy">
+            </a>
+            <div class="gallery-info">
+                <h4>Artwork 190_cUVhsUlmhVT1</h4>
+                <p class="artist">by Unknown Artist</p>
+                <p class="tags">Untagged</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-artist="Unknown Artist" data-tags="">
+            <a href="images/art/artwork-190_rtbnpumhvpzm.jpg" class="gallery-link" target="_blank">
+                <img src="images/thumbs/artwork-190_rtbnpumhvpzm.jpg" alt="Artwork 190_rTbnpUMHvpZM" loading="lazy">
+            </a>
+            <div class="gallery-info">
+                <h4>Artwork 190_rTbnpUMHvpZM</h4>
+                <p class="artist">by Unknown Artist</p>
+                <p class="tags">Untagged</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-artist="Unknown Artist" data-tags="">
+            <a href="images/art/artwork-190_tcxxnhevjekm.jpg" class="gallery-link" target="_blank">
+                <img src="images/thumbs/artwork-190_tcxxnhevjekm.jpg" alt="Artwork 190_tcXxnHEvJEKM" loading="lazy">
+            </a>
+            <div class="gallery-info">
+                <h4>Artwork 190_tcXxnHEvJEKM</h4>
+                <p class="artist">by Unknown Artist</p>
+                <p class="tags">Untagged</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-artist="Unknown Artist" data-tags="">
+            <a href="images/art/artwork-190_yee1shpdccap.jpg" class="gallery-link" target="_blank">
+                <img src="images/thumbs/artwork-190_yee1shpdccap.jpg" alt="Artwork 190_yee1shpdccap" loading="lazy">
+            </a>
+            <div class="gallery-info">
+                <h4>Artwork 190_yee1shpdccap</h4>
+                <p class="artist">by Unknown Artist</p>
+                <p class="tags">Untagged</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-artist="Unknown Artist" data-tags="">
+            <a href="images/art/artwork-196_vueezium0bqd.jpg" class="gallery-link" target="_blank">
+                <img src="images/thumbs/artwork-196_vueezium0bqd.jpg" alt="Artwork 196_vuEEziuM0bqD" loading="lazy">
+            </a>
+            <div class="gallery-info">
+                <h4>Artwork 196_vuEEziuM0bqD</h4>
+                <p class="artist">by Unknown Artist</p>
+                <p class="tags">Untagged</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-artist="Unknown Artist" data-tags="">
+            <a href="images/art/artwork-205_14zjkhm3mtgq.jpg" class="gallery-link" target="_blank">
+                <img src="images/thumbs/artwork-205_14zjkhm3mtgq.jpg" alt="Artwork 205_14zJKhm3mtGq" loading="lazy">
+            </a>
+            <div class="gallery-info">
+                <h4>Artwork 205_14zJKhm3mtGq</h4>
+                <p class="artist">by Unknown Artist</p>
+                <p class="tags">Untagged</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-artist="Unknown Artist" data-tags="">
+            <a href="images/art/artwork-205_5ihsiqui820s.jpg" class="gallery-link" target="_blank">
+                <img src="images/thumbs/artwork-205_5ihsiqui820s.jpg" alt="Artwork 205_5IHSiQUi820S" loading="lazy">
+            </a>
+            <div class="gallery-info">
+                <h4>Artwork 205_5IHSiQUi820S</h4>
+                <p class="artist">by Unknown Artist</p>
+                <p class="tags">Untagged</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-artist="Unknown Artist" data-tags="">
+            <a href="images/art/artwork-205_9vs8gityluav.jpg" class="gallery-link" target="_blank">
+                <img src="images/thumbs/artwork-205_9vs8gityluav.jpg" alt="Artwork 205_9vS8GityLuaV" loading="lazy">
+            </a>
+            <div class="gallery-info">
+                <h4>Artwork 205_9vS8GityLuaV</h4>
+                <p class="artist">by Unknown Artist</p>
+                <p class="tags">Untagged</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-artist="Unknown Artist" data-tags="">
+            <a href="images/art/artwork-205_dicdr52jesvy.jpg" class="gallery-link" target="_blank">
+                <img src="images/thumbs/artwork-205_dicdr52jesvy.jpg" alt="Artwork 205_DICDR52jesvY" loading="lazy">
+            </a>
+            <div class="gallery-info">
+                <h4>Artwork 205_DICDR52jesvY</h4>
+                <p class="artist">by Unknown Artist</p>
+                <p class="tags">Untagged</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-artist="Unknown Artist" data-tags="">
+            <a href="images/art/artwork-205_o7cskayxtvat.jpg" class="gallery-link" target="_blank">
+                <img src="images/thumbs/artwork-205_o7cskayxtvat.jpg" alt="Artwork 205_O7csKayXtVat" loading="lazy">
+            </a>
+            <div class="gallery-info">
+                <h4>Artwork 205_O7csKayXtVat</h4>
+                <p class="artist">by Unknown Artist</p>
+                <p class="tags">Untagged</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-artist="Unknown Artist" data-tags="">
+            <a href="images/art/artwork-205_eqfdgehjxoni.jpg" class="gallery-link" target="_blank">
+                <img src="images/thumbs/artwork-205_eqfdgehjxoni.jpg" alt="Artwork 205_eQFdGeHJXoNI" loading="lazy">
+            </a>
+            <div class="gallery-info">
+                <h4>Artwork 205_eQFdGeHJXoNI</h4>
+                <p class="artist">by Unknown Artist</p>
+                <p class="tags">Untagged</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-artist="Unknown Artist" data-tags="">
+            <a href="images/art/artwork-220_bpqnt9fi2ard.jpg" class="gallery-link" target="_blank">
+                <img src="images/thumbs/artwork-220_bpqnt9fi2ard.jpg" alt="Artwork 220_BPQnt9fI2aRD" loading="lazy">
+            </a>
+            <div class="gallery-info">
+                <h4>Artwork 220_BPQnt9fI2aRD</h4>
+                <p class="artist">by Unknown Artist</p>
+                <p class="tags">Untagged</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-artist="Unknown Artist" data-tags="">
+            <a href="images/art/artwork-276_dbx7dcqs28le.jpg" class="gallery-link" target="_blank">
+                <img src="images/thumbs/artwork-276_dbx7dcqs28le.jpg" alt="Artwork 276_dbx7dCqS28le" loading="lazy">
+            </a>
+            <div class="gallery-info">
+                <h4>Artwork 276_dbx7dCqS28le</h4>
+                <p class="artist">by Unknown Artist</p>
+                <p class="tags">Untagged</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-artist="Unknown Artist" data-tags="">
+            <a href="images/art/artwork-281_1vmzkpoulbst.jpg" class="gallery-link" target="_blank">
+                <img src="images/thumbs/artwork-281_1vmzkpoulbst.jpg" alt="Artwork 281_1VmZKPouLBSt" loading="lazy">
+            </a>
+            <div class="gallery-info">
+                <h4>Artwork 281_1VmZKPouLBSt</h4>
+                <p class="artist">by Unknown Artist</p>
+                <p class="tags">Untagged</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-artist="Unknown Artist" data-tags="">
+            <a href="images/art/artwork-281_3ixa3v66zpj8.jpg" class="gallery-link" target="_blank">
+                <img src="images/thumbs/artwork-281_3ixa3v66zpj8.jpg" alt="Artwork 281_3IXA3v66zPJ8" loading="lazy">
+            </a>
+            <div class="gallery-info">
+                <h4>Artwork 281_3IXA3v66zPJ8</h4>
+                <p class="artist">by Unknown Artist</p>
+                <p class="tags">Untagged</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-artist="Unknown Artist" data-tags="">
+            <a href="images/art/artwork-281_cnih67tnfjdf.jpg" class="gallery-link" target="_blank">
+                <img src="images/thumbs/artwork-281_cnih67tnfjdf.jpg" alt="Artwork 281_CNIh67TnFjdF" loading="lazy">
+            </a>
+            <div class="gallery-info">
+                <h4>Artwork 281_CNIh67TnFjdF</h4>
+                <p class="artist">by Unknown Artist</p>
+                <p class="tags">Untagged</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-artist="Unknown Artist" data-tags="">
+            <a href="images/art/artwork-281_ix7cx6ricgly.jpg" class="gallery-link" target="_blank">
+                <img src="images/thumbs/artwork-281_ix7cx6ricgly.jpg" alt="Artwork 281_iX7CX6riCgLY" loading="lazy">
+            </a>
+            <div class="gallery-info">
+                <h4>Artwork 281_iX7CX6riCgLY</h4>
+                <p class="artist">by Unknown Artist</p>
+                <p class="tags">Untagged</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-artist="Unknown Artist" data-tags="">
+            <a href="images/art/artwork-281_qcsqdsb57pxv.jpg" class="gallery-link" target="_blank">
+                <img src="images/thumbs/artwork-281_qcsqdsb57pxv.jpg" alt="Artwork 281_qCSQDsb57pxv" loading="lazy">
+            </a>
+            <div class="gallery-info">
+                <h4>Artwork 281_qCSQDsb57pxv</h4>
+                <p class="artist">by Unknown Artist</p>
+                <p class="tags">Untagged</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-artist="Unknown Artist" data-tags="">
+            <a href="images/art/artwork-2_9pq6qzzilrjl.jpg" class="gallery-link" target="_blank">
+                <img src="images/thumbs/artwork-2_9pq6qzzilrjl.jpg" alt="Artwork 2_9pq6qZzilrJL" loading="lazy">
+            </a>
+            <div class="gallery-info">
+                <h4>Artwork 2_9pq6qZzilrJL</h4>
+                <p class="artist">by Unknown Artist</p>
+                <p class="tags">Untagged</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-artist="Unknown Artist" data-tags="">
+            <a href="images/art/artwork-2_pv2qqiktvmui.jpg" class="gallery-link" target="_blank">
+                <img src="images/thumbs/artwork-2_pv2qqiktvmui.jpg" alt="Artwork 2_Pv2QQIkTVmUI" loading="lazy">
+            </a>
+            <div class="gallery-info">
+                <h4>Artwork 2_Pv2QQIkTVmUI</h4>
+                <p class="artist">by Unknown Artist</p>
+                <p class="tags">Untagged</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-artist="Unknown Artist" data-tags="">
+            <a href="images/art/artwork-38_1alphk3aqami.jpg" class="gallery-link" target="_blank">
+                <img src="images/thumbs/artwork-38_1alphk3aqami.jpg" alt="Artwork 38_1alPHk3aqAMI" loading="lazy">
+            </a>
+            <div class="gallery-info">
+                <h4>Artwork 38_1alPHk3aqAMI</h4>
+                <p class="artist">by Unknown Artist</p>
+                <p class="tags">Untagged</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-artist="Unknown Artist" data-tags="">
+            <a href="images/art/artwork-38_hepr7ycxbe26.jpg" class="gallery-link" target="_blank">
+                <img src="images/thumbs/artwork-38_hepr7ycxbe26.jpg" alt="Artwork 38_HEPR7YCXbe26" loading="lazy">
+            </a>
+            <div class="gallery-info">
+                <h4>Artwork 38_HEPR7YCXbe26</h4>
+                <p class="artist">by Unknown Artist</p>
+                <p class="tags">Untagged</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-artist="Unknown Artist" data-tags="">
+            <a href="images/art/artwork-38_kp7ocs28pftm.jpg" class="gallery-link" target="_blank">
+                <img src="images/thumbs/artwork-38_kp7ocs28pftm.jpg" alt="Artwork 38_kP7OCs28PFTM" loading="lazy">
+            </a>
+            <div class="gallery-info">
+                <h4>Artwork 38_kP7OCs28PFTM</h4>
+                <p class="artist">by Unknown Artist</p>
+                <p class="tags">Untagged</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-artist="Unknown Artist" data-tags="">
+            <a href="images/art/artwork-591150229714.jpg" class="gallery-link" target="_blank">
+                <img src="images/thumbs/artwork-591150229714.jpg" alt="Artwork 591150229714" loading="lazy">
+            </a>
+            <div class="gallery-info">
+                <h4>Artwork 591150229714</h4>
+                <p class="artist">by Unknown Artist</p>
+                <p class="tags">Untagged</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-artist="Unknown Artist" data-tags="">
+            <a href="images/art/artwork-59_87d8atun3zbi.jpg" class="gallery-link" target="_blank">
+                <img src="images/thumbs/artwork-59_87d8atun3zbi.jpg" alt="Artwork 59_87d8aTuN3ZbI" loading="lazy">
+            </a>
+            <div class="gallery-info">
+                <h4>Artwork 59_87d8aTuN3ZbI</h4>
+                <p class="artist">by Unknown Artist</p>
+                <p class="tags">Untagged</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-artist="Unknown Artist" data-tags="">
+            <a href="images/art/artwork-59_92iohdpxeao9.jpg" class="gallery-link" target="_blank">
+                <img src="images/thumbs/artwork-59_92iohdpxeao9.jpg" alt="Artwork 59_92IoHdpxeAO9" loading="lazy">
+            </a>
+            <div class="gallery-info">
+                <h4>Artwork 59_92IoHdpxeAO9</h4>
+                <p class="artist">by Unknown Artist</p>
+                <p class="tags">Untagged</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-artist="Unknown Artist" data-tags="">
+            <a href="images/art/artwork-59_b6cnd6vksovo.jpg" class="gallery-link" target="_blank">
+                <img src="images/thumbs/artwork-59_b6cnd6vksovo.jpg" alt="Artwork 59_B6cnd6vkSOvo" loading="lazy">
+            </a>
+            <div class="gallery-info">
+                <h4>Artwork 59_B6cnd6vkSOvo</h4>
+                <p class="artist">by Unknown Artist</p>
+                <p class="tags">Untagged</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-artist="Unknown Artist" data-tags="">
+            <a href="images/art/artwork-59_rhu8ntpnpuq8.jpg" class="gallery-link" target="_blank">
+                <img src="images/thumbs/artwork-59_rhu8ntpnpuq8.jpg" alt="Artwork 59_RhU8NtpNpuQ8" loading="lazy">
+            </a>
+            <div class="gallery-info">
+                <h4>Artwork 59_RhU8NtpNpuQ8</h4>
+                <p class="artist">by Unknown Artist</p>
+                <p class="tags">Untagged</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-artist="Unknown Artist" data-tags="">
+            <a href="images/art/artwork-59_q13ymp5ehj2g.jpg" class="gallery-link" target="_blank">
+                <img src="images/thumbs/artwork-59_q13ymp5ehj2g.jpg" alt="Artwork 59_q13YMP5eHj2g" loading="lazy">
+            </a>
+            <div class="gallery-info">
+                <h4>Artwork 59_q13YMP5eHj2g</h4>
+                <p class="artist">by Unknown Artist</p>
+                <p class="tags">Untagged</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-artist="Unknown Artist" data-tags="">
+            <a href="images/art/artwork-59_rfq8pruzhcof.jpg" class="gallery-link" target="_blank">
+                <img src="images/thumbs/artwork-59_rfq8pruzhcof.jpg" alt="Artwork 59_rFQ8PrUZHcof" loading="lazy">
+            </a>
+            <div class="gallery-info">
+                <h4>Artwork 59_rFQ8PrUZHcof</h4>
+                <p class="artist">by Unknown Artist</p>
+                <p class="tags">Untagged</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-artist="Unknown Artist" data-tags="">
+            <a href="images/art/artwork-69_hhszrzbskiva.jpg" class="gallery-link" target="_blank">
+                <img src="images/thumbs/artwork-69_hhszrzbskiva.jpg" alt="Artwork 69_HHSzRZbskivA" loading="lazy">
+            </a>
+            <div class="gallery-info">
+                <h4>Artwork 69_HHSzRZbskivA</h4>
+                <p class="artist">by Unknown Artist</p>
+                <p class="tags">Untagged</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-artist="Unknown Artist" data-tags="">
+            <a href="images/art/artwork-69_jd6rnklavndf.jpg" class="gallery-link" target="_blank">
+                <img src="images/thumbs/artwork-69_jd6rnklavndf.jpg" alt="Artwork 69_JD6rnkLAvnDF" loading="lazy">
+            </a>
+            <div class="gallery-info">
+                <h4>Artwork 69_JD6rnkLAvnDF</h4>
+                <p class="artist">by Unknown Artist</p>
+                <p class="tags">Untagged</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-artist="Unknown Artist" data-tags="">
+            <a href="images/art/artwork-951150816642.jpg" class="gallery-link" target="_blank">
+                <img src="images/thumbs/artwork-951150816642.jpg" alt="Artwork 951150816642" loading="lazy">
+            </a>
+            <div class="gallery-info">
+                <h4>Artwork 951150816642</h4>
+                <p class="artist">by Unknown Artist</p>
+                <p class="tags">Untagged</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-artist="Voltaire" data-tags="">
+            <a href="images/art/artwork-volt1093214557589.jpg" class="gallery-link" target="_blank">
+                <img src="images/thumbs/artwork-volt1093214557589.jpg" alt="Artwork Volt1093214557589" loading="lazy">
+            </a>
+            <div class="gallery-info">
+                <h4>Artwork Volt1093214557589</h4>
+                <p class="artist">by Voltaire</p>
+                <p class="tags">Untagged</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="archive-notice" style="margin-top: 2rem;">
+        <h3>About These Images</h3>
+        <p>
+            These artworks were recovered from Wayback Machine archives of poisonthemind.com.
+            Image quality varies based on the archived versions available. Original filenames and
+            artist attributions have been preserved where possible.
+        </p>
+    </div>
+</div>
+
+<footer>
+    <p><strong>Poison the Mind Memorial Archive</strong></p>
+    <p>Preserving the creative legacy of poisonthemind.com</p>
+    <p>Founded by Matthew "Bitterman" Hall - 2004-2010</p>
+</footer>
+
+<script>
+document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+
+        const filter = this.dataset.filter;
+        document.querySelectorAll('.gallery-item').forEach(item => {
+            if (filter === 'all' || item.dataset.artist === filter) {
+                item.style.display = 'block';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+    });
+});
+</script>
+</body>
+</html>
